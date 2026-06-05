@@ -1,4 +1,11 @@
 {
+  "name": "webauditx-backend",
+  "version": "1.0.0",
+  "description": "WebAuditX Backend API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "axios": "^1.16.0",
     "bcryptjs": "^3.0.3",
