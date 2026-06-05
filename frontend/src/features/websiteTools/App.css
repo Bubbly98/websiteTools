@@ -1,0 +1,659 @@
+/* =========================
+   GLOBAL
+========================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:Arial, sans-serif;
+  background:#efefef;
+  color:#111827;
+}
+
+.page{
+  width:100%;
+  min-height:100vh;
+  padding-bottom:80px;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.topbar{
+  width:86%;
+  height:78px;
+
+  margin:auto;
+  margin-top:20px;
+
+  background:white;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding:0 28px;
+
+  border-radius:16px;
+
+  box-shadow:
+    0 5px 20px rgba(0,0,0,0.05);
+}
+
+.logo{
+  font-size:28px;
+  font-weight:800;
+}
+
+.logo span{
+  color:#11c5a1;
+}
+
+.navLinks{
+  display:flex;
+  gap:40px;
+  font-size:15px;
+}
+
+.navLinks p{
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.navLinks p:hover{
+  color:#11c5a1;
+}
+
+.activeNav{
+  color:#11c5a1;
+  font-weight:bold;
+}
+
+.topButtons{
+  display:flex;
+  gap:14px;
+}
+
+.signBtn{
+  padding:12px 22px;
+
+  border:none;
+
+  background:#e5e7eb;
+
+  border-radius:14px;
+
+  cursor:pointer;
+}
+
+.auditBtn{
+  padding:12px 24px;
+
+  border:none;
+
+  background:#11c5a1;
+  color:white;
+
+  border-radius:14px;
+
+  cursor:pointer;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  text-align:center;
+  padding-top:80px;
+}
+
+.toolBadge{
+  width:max-content;
+
+  margin:auto;
+
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+  background:white;
+
+  padding:12px 22px;
+
+  border-radius:999px;
+
+  color:#11c5a1;
+  font-weight:600;
+
+  box-shadow:
+    0 4px 15px rgba(0,0,0,0.05);
+}
+
+.hero h1{
+  margin-top:30px;
+
+  font-size:70px;
+  line-height:1.1;
+}
+
+.hero h1 span{
+  color:#11c5a1;
+}
+
+.heroText{
+  width:65%;
+
+  margin:auto;
+  margin-top:24px;
+
+  font-size:18px;
+  line-height:1.8;
+
+  color:#4b5563;
+}
+
+/* =========================
+   STATS
+========================= */
+
+.statsContainer{
+  width:86%;
+
+  margin:auto;
+  margin-top:70px;
+
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+
+  gap:20px;
+}
+
+.statCard{
+  background:white;
+
+  padding:30px;
+
+  border-radius:20px;
+
+  text-align:center;
+
+  box-shadow:
+    0 5px 20px rgba(0,0,0,0.04);
+}
+
+.statCard h2{
+  font-size:34px;
+  color:#11c5a1;
+  margin-bottom:10px;
+}
+
+.statCard p{
+  color:#4b5563;
+}
+
+/* =========================
+   TOOL GRID
+========================= */
+
+.toolsGrid{
+  width:86%;
+
+  margin:auto;
+  margin-top:70px;
+
+  display:grid;
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:24px;
+}
+
+.toolCard{
+  background:white;
+
+  padding:30px;
+
+  border-radius:24px;
+
+  cursor:pointer;
+
+  transition:0.3s;
+
+  border:2px solid transparent;
+
+  box-shadow:
+    0 4px 15px rgba(0,0,0,0.04);
+}
+
+.toolCard:hover{
+  transform:translateY(-6px);
+
+  border-color:#11c5a1;
+}
+
+.activeTool{
+  border-color:#11c5a1;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #f2fffb
+    );
+}
+
+.toolIcon{
+  font-size:40px;
+
+  color:#11c5a1;
+
+  margin-bottom:18px;
+}
+
+.toolCard h3{
+  font-size:22px;
+
+  margin-bottom:14px;
+}
+
+.toolCard p{
+  color:#4b5563;
+
+  line-height:1.7;
+}
+
+/* =========================
+   WORKSPACE
+========================= */
+
+.workspaceCard{
+  width:86%;
+
+  margin:auto;
+  margin-top:70px;
+
+  background:white;
+
+  border-radius:28px;
+
+  overflow:hidden;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.06);
+}
+
+.workspaceHeader{
+  background:
+    linear-gradient(
+      135deg,
+      #11c5a1,
+      #18d3ad
+    );
+
+  color:white;
+
+  padding:45px;
+}
+
+.workspaceHeader h1{
+  font-size:38px;
+
+  margin-bottom:10px;
+}
+
+.workspaceHeader p{
+  opacity:0.95;
+}
+
+.workspaceBody{
+  padding:45px;
+}
+
+.workspaceBody h2{
+  font-size:34px;
+
+  margin-bottom:20px;
+}
+
+.workspaceBody p{
+  color:#4b5563;
+
+  line-height:1.8;
+
+  margin-bottom:25px;
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+.toolInput{
+  width:100%;
+
+  height:65px;
+
+  padding:0 20px;
+
+  border:1px solid #d1d5db;
+
+  border-radius:16px;
+
+  font-size:16px;
+
+  margin-bottom:18px;
+
+  outline:none;
+}
+
+.toolInput:focus{
+  border-color:#11c5a1;
+}
+
+.toolTextarea{
+  width:100%;
+  height:220px;
+
+  resize:none;
+
+  padding:20px;
+
+  border:1px solid #d1d5db;
+
+  border-radius:16px;
+
+  font-size:15px;
+
+  margin-bottom:20px;
+
+  outline:none;
+}
+
+.toolTextarea:focus{
+  border-color:#11c5a1;
+}
+
+.toolButton{
+  background:#11c5a1;
+  color:white;
+
+  border:none;
+
+  padding:15px 28px;
+
+  border-radius:14px;
+
+  font-size:15px;
+  font-weight:bold;
+
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+.toolButton:hover{
+  transform:translateY(-2px);
+}
+
+/* =========================
+   IMAGE TOOL
+========================= */
+
+.toolArea{
+  margin-top:30px;
+}
+
+.uploadBox{
+  border:2px dashed #11c5a1;
+
+  border-radius:24px;
+
+  padding:70px 30px;
+
+  text-align:center;
+
+  background:#f5fffc;
+}
+
+.uploadBox svg{
+  color:#11c5a1;
+
+  margin-bottom:18px;
+}
+
+.uploadBox p{
+  margin-bottom:20px;
+}
+
+.uploadBox button{
+  background:#11c5a1;
+  color:white;
+
+  border:none;
+
+  padding:14px 24px;
+
+  border-radius:14px;
+
+  cursor:pointer;
+}
+
+.resultBox {
+
+  margin-top:30px;
+
+  background:#f8fffd;
+
+  border:1px solid #d7f5ed;
+
+  padding:25px;
+
+  border-radius:18px;
+}
+
+.resultBox h3 {
+
+  margin-bottom:15px;
+
+  color:#11c5a1;
+}
+
+.copyBtn {
+
+  margin-top:15px;
+
+  background:#111827;
+
+  color:white;
+
+  border:none;
+
+  padding:14px 24px;
+
+  border-radius:12px;
+
+  cursor:pointer;
+}
+
+.toolButtonActive{
+
+  background:#16a34a !important;
+
+  transform:scale(1.02);
+}
+
+.tooltip{
+
+  position:relative;
+}
+
+.tooltipText{
+
+  visibility:hidden;
+
+  position:absolute;
+
+  bottom:120%;
+  left:50%;
+
+  transform:
+    translateX(-50%);
+
+  background:#111827;
+
+  color:white;
+
+  padding:8px 12px;
+
+  border-radius:8px;
+
+  white-space:nowrap;
+
+  font-size:12px;
+
+  z-index:100;
+}
+
+.tooltip:hover .tooltipText{
+
+  visibility:visible;
+}
+
+.copyBtnSuccess{
+
+  background:#16a34a !important;
+
+  color:white;
+
+  transform:scale(1.05);
+
+  transition:all 0.3s ease;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1200px){
+
+  .hero h1{
+    font-size:56px;
+  }
+
+  .statsContainer{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .toolsGrid{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+}
+
+@media(max-width:900px){
+
+  .topbar{
+    width:95%;
+
+    flex-direction:column;
+
+    height:auto;
+
+    padding:20px;
+
+    gap:20px;
+  }
+
+  .navLinks{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+  }
+
+  .hero h1{
+    font-size:42px;
+  }
+
+  .heroText{
+    width:90%;
+  }
+
+  .statsContainer{
+    width:95%;
+    grid-template-columns:1fr;
+  }
+
+  .toolsGrid{
+    width:95%;
+    grid-template-columns:1fr;
+  }
+
+  .workspaceCard{
+    width:95%;
+  }
+
+  .workspaceBody{
+    padding:25px;
+  }
+
+  .resultBox {
+
+  margin-top:30px;
+
+  background:#f8fffd;
+
+  border:1px solid #d7f5ed;
+
+  padding:25px;
+
+  border-radius:18px;
+}
+
+.resultBox h3 {
+
+  margin-bottom:15px;
+
+  color:#11c5a1;
+}
+
+.copyBtn {
+
+  margin-top:15px;
+
+  background:#111827;
+
+  color:white;
+
+  border:none;
+
+  padding:14px 24px;
+
+  border-radius:12px;
+
+  cursor:pointer;
+}
+
+}
+
+@media(max-width:600px){
+
+  .hero h1{
+    font-size:34px;
+  }
+
+  .workspaceHeader h1{
+    font-size:28px;
+  }
+
+  .workspaceBody h2{
+    font-size:26px;
+  }
+
+}
