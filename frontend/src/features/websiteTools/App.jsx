@@ -182,7 +182,7 @@ function App() {
   
       const response =
         await fetch(
-          "http://localhost:5000/api/tools/css-minifier",
+          "https://website-tools-jlfb.vercel.app/api/tools/css-minifier",
           {
             method: "POST",
   
@@ -235,7 +235,7 @@ function App() {
   
       const response =
         await fetch(
-          "http://localhost:5000/api/tools/js-minifier",
+          "https://website-tools-jlfb.vercel.app/api/tools/js-minifier",
           {
             method: "POST",
   
@@ -289,7 +289,7 @@ function App() {
   
       const response =
         await fetch(
-          "http://localhost:5000/api/tools/html-minifier",
+          "https://website-tools-jlfb.vercel.app/api/tools/html-minifier",
           {
             method: "POST",
   
@@ -347,7 +347,7 @@ function App() {
 
       const response =
         await fetch(
-          "http://localhost:5000/api/tools/text-to-html",
+          "https://website-tools-jlfb.vercel.app/api/tools/text-to-html",
           {
             method: "POST",
 
@@ -396,7 +396,7 @@ const handleMetaGenerator = async () => {
 
     const response =
       await fetch(
-        "http://localhost:5000/api/tools/meta-generator",
+        "https://website-tools-jlfb.vercel.app/api/tools/meta-generator",
         {
           method: "POST",
 
@@ -466,7 +466,7 @@ const handleRobotsGenerator = async () => {
 
     const response =
       await fetch(
-        "http://localhost:5000/api/tools/robots-generator",
+        "https://website-tools-jlfb.vercel.app/api/tools/robots-generator",
         {
           method: "POST",
 
@@ -520,7 +520,7 @@ const handleSitemapGenerator = async () => {
 
     const response =
       await fetch(
-        "http://localhost:5000/api/tools/sitemap-generator",
+        "https://website-tools-jlfb.vercel.app/api/tools/sitemap-generator",
         {
           method: "POST",
 
@@ -587,7 +587,7 @@ const handleImageCompression = async () => {
 
     const response =
       await fetch(
-        "http://localhost:5000/api/tools/image-compressor",
+        "https://website-tools-jlfb.vercel.app/api/tools/image-compressor",
         {
           method:"POST",
           body:formData
@@ -629,7 +629,7 @@ const handlePerformanceAnalysis = async () => {
 
     const response =
       await fetch(
-        "http://localhost:5000/api/tools/performance-advisor",
+        "https://website-tools-jlfb.vercel.app/api/tools/performance-advisor",
         {
           method:"POST",
 
@@ -765,7 +765,7 @@ const handlePerformanceAnalysis = async () => {
                 </p>
 
                 <a
-                  href={`http://localhost:5000/compressed/${imageResult.fileName}`}
+                  href={`https://website-tools-jlfb.vercel.app/api/tools/compressed/${imageResult.fileName}`}
                   target="_blank"
                   rel="noreferrer"
                 >
