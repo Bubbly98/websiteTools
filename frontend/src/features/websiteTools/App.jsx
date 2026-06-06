@@ -1311,7 +1311,7 @@ const selectTool = (toolId) => {
                 handleSitemapGenerator
               }
             >
-              Sitemap Generated Successfully
+              Generate Sitemap
             </button>
       
             {sitemapOutput && (
