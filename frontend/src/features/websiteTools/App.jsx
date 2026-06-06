@@ -765,9 +765,8 @@ const handlePerformanceAnalysis = async () => {
                 </p>
 
                 <a
-                  href={`https://website-tools-jlfb.vercel.app/api/tools/compressed/${imageResult.fileName}`}
-                  target="_blank"
-                  rel="noreferrer"
+                  href={`data:image/jpeg;base64,${imageResult.imageData}`}
+                  download="compressed-image.jpg"
                 >
                   <button
                     className="copyBtn tooltip"

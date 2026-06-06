@@ -1,63 +1,19 @@
-const sharp =
-  require("sharp");
+const sharp = require("sharp");
 
-const path =
-  require("path");
+async function compressImage(file) {
 
-const fs =
-  require("fs");
-
-async function compressImage(
-  file
-) {
-
-  const outputDir =
-    path.join(
-      __dirname,
-      "../uploads/compressed"
-    );
-
-  if (
-    !fs.existsSync(
-      outputDir
-    )
-  ) {
-
-    fs.mkdirSync(
-      outputDir,
-      {
-        recursive: true
-      }
-    );
-
-  }
-
-  const fileName =
-    `compressed-${Date.now()}.jpg`;
-
-  const outputPath =
-    path.join(
-      outputDir,
-      fileName
-    );
-
-  await sharp(
-    file.buffer
-  )
-    .jpeg({
-      quality: 70
-    })
-    .toFile(
-      outputPath
-    );
+  const compressedBuffer =
+    await sharp(file.buffer)
+      .jpeg({
+        quality: 70
+      })
+      .toBuffer();
 
   const originalSize =
     file.size;
 
   const compressedSize =
-    fs.statSync(
-      outputPath
-    ).size;
+    compressedBuffer.length;
 
   const reduction =
     (
@@ -70,16 +26,18 @@ async function compressImage(
 
   return {
 
-    fileName,
-
     originalSize,
 
     compressedSize,
 
     reduction:
-      reduction.toFixed(2)
+      reduction.toFixed(2),
+
+    imageData:
+      compressedBuffer.toString("base64")
 
   };
+
 }
 
 module.exports =
