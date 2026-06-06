@@ -676,6 +676,26 @@ const handlePerformanceAnalysis = async () => {
 
 };
 
+const selectTool = (toolId) => {
+
+  setSelectedTool(toolId);
+
+  setTimeout(() => {
+
+    document
+      .getElementById("workspace")
+      ?.scrollIntoView({
+
+        behavior: "smooth",
+
+        block: "start"
+
+      });
+
+  }, 100);
+
+};
+
   const getToolContent = () => {
     switch (selectedTool) {
       case "image":
@@ -1514,7 +1534,7 @@ const handlePerformanceAnalysis = async () => {
                 : ""
             }`}
             onClick={() =>
-              setSelectedTool(tool.id)
+              selectTool(tool.id)
             }
           >
 
@@ -1536,7 +1556,7 @@ const handlePerformanceAnalysis = async () => {
 
       {/* WORKSPACE */}
 
-      <div className="workspaceCard">
+      <div id="workspace" className="workspaceCard">
 
         <div className="workspaceHeader">
 
