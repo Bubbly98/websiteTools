@@ -1464,7 +1464,7 @@ const selectTool = (toolId) => {
 
         <h1>
           Website Optimization
-          <span> Tools Suite</span>
+          <span> Tools </span>
         </h1>
 
         <p className="heroText">
