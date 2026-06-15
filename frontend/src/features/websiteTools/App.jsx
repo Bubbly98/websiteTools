@@ -1448,6 +1448,7 @@ const selectTool = (toolId) => {
         <div className="logo">
           WebAudit <span>X</span>
         </div>
+      </div>
 
 
       {/* HERO */}
