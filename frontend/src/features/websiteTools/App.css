@@ -535,6 +535,38 @@ body{
   transition:all 0.3s ease;
 }
 
+.file-upload input[type="file"] {
+  display: none;
+}
+
+.upload-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+}
+
+.upload-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(79, 70, 229, 0.35);
+}
+
+.upload-btn:active {
+  transform: translateY(0);
+}
+
+.file-name {
+  margin-top: 10px;
+  color: #555;
+  font-size: 14px;
+}
+
 /* =========================
    RESPONSIVE
 ========================= */

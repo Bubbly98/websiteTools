@@ -712,15 +712,26 @@ const selectTool = (toolId) => {
               and reduce file size.
             </p>
 
-            <input
-              type="file"
-              accept=".jpg,.jpeg,.png,.webp"
-              onChange={(e)=>
-                setSelectedImage(
-                  e.target.files[0]
-                )
-              }
-            />
+            <div className="file-upload">
+              <input
+                id="imageUpload"
+                type="file"
+                accept=".jpg,.jpeg,.png,.webp"
+                onChange={(e) =>
+                  setSelectedImage(e.target.files[0])
+                }
+              />
+
+              <label htmlFor="imageUpload" className="upload-btn">
+                📷 Choose Image
+              </label>
+
+              {selectedImage && (
+                <p className="file-name">
+                  {selectedImage.name}
+                </p>
+              )}
+            </div>
 
             <br />
             <br />
