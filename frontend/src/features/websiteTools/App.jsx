@@ -1449,26 +1449,6 @@ const selectTool = (toolId) => {
           WebAudit <span>X</span>
         </div>
 
-        <div className="navLinks">
-          <p>Overview</p>
-          <p>Analysis</p>
-          <p>Issues</p>
-          <p className="activeNav">
-            Tools
-          </p>
-        </div>
-
-        <div className="topButtons">
-          <button className="signBtn">
-            Sign In
-          </button>
-
-          <button className="auditBtn">
-            Start Free Audit
-          </button>
-        </div>
-
-      </div>
 
       {/* HERO */}
 
